@@ -42,7 +42,7 @@ export default {
             {
               label: "Software House",
               icon: "pi pi-fw pi-home",
-              to: "/appSystem/home",
+              to: "/appSystem",
             },
             {
               label: "Gerenciamento de Usuários",
