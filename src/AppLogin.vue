@@ -2,14 +2,14 @@
   <Toast />
   <!-- INICIO FORM LOGIN-->
   <div class="grid fullScreen">
-    <div class="col-3 card">
+    <div class="col-12 lg:col-3 xl:col-3 card">
       <div class="shadow-4">
         <div class="text-center p-4">
-          <img src="../public/images/logo-login.svg" alt="logo" />
+          <img src="../public/images/logo-login.svg" alt="logo" style="width: 70%;" />
         </div>
         <div class="card p-fluid">
           <form @submit.prevent="logar()">
-            <div class="field mb-3">
+            <div class="field">
               <InputText
                 id="usuario"
                 class="text-center"
@@ -61,8 +61,10 @@
         </div>
       </div>
     </div>
-    <div class="col-9">
-      <h1>PAINEL</h1>
+    <div class="md:col-8 lg:col-9 xl:col-9 painelDiv">
+      <div>
+        <img src="../public/images/wallpapper.png" class="img-fluid" />
+      </div>
     </div>
   </div>
 </template>
@@ -80,5 +82,14 @@ export default {};
   height: 99vh;
   overflow: hidden;
   margin: 0px auto;
+}
+.img-fluid {
+  min-width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 992px) {
+  .painelDiv {
+    display: none !important;
+  }
 }
 </style>

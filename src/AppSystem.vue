@@ -40,9 +40,19 @@ export default {
           label: "Home",
           items: [
             {
-              label: "Dashboard",
+              label: "Software House",
               icon: "pi pi-fw pi-home",
-              to: "/",
+              to: "/appSystem/home",
+            },
+            {
+              label: "Gerenciamento de Usuários",
+              icon: "pi pi-fw pi-users",
+              to: "/appSystem/users",
+            },
+            {
+              label: "Dashboard",
+              icon: "pi pi-fw pi-chart-line",
+              to: "/appSystem/dashboard",
             },
           ],
         },
@@ -53,30 +63,30 @@ export default {
             {
               label: "Form Layout",
               icon: "pi pi-fw pi-id-card",
-              to: "/formlayout",
+              to: "/appSystem/formlayout",
             },
-            { label: "Input", icon: "pi pi-fw pi-check-square", to: "/input" },
+            { label: "Input", icon: "pi pi-fw pi-check-square", to: "/appSystem/input" },
             {
               label: "Float Label",
               icon: "pi pi-fw pi-bookmark",
-              to: "/floatlabel",
+              to: "/appSystem/floatlabel",
             },
             {
               label: "Invalid State",
               icon: "pi pi-fw pi-exclamation-circle",
               to: "invalidstate",
             },
-            { label: "Button", icon: "pi pi-fw pi-mobile", to: "/button" },
-            { label: "Table", icon: "pi pi-fw pi-table", to: "/table" },
-            { label: "List", icon: "pi pi-fw pi-list", to: "/list" },
-            { label: "Tree", icon: "pi pi-fw pi-share-alt", to: "/tree" },
-            { label: "Panel", icon: "pi pi-fw pi-tablet", to: "/panel" },
-            { label: "Overlay", icon: "pi pi-fw pi-clone", to: "/overlay" },
-            { label: "Menu", icon: "pi pi-fw pi-bars", to: "/menu" },
-            { label: "Message", icon: "pi pi-fw pi-comment", to: "/messages" },
-            { label: "File", icon: "pi pi-fw pi-file", to: "/file" },
-            { label: "Chart", icon: "pi pi-fw pi-chart-bar", to: "/chart" },
-            { label: "Misc", icon: "pi pi-fw pi-circle-off", to: "/misc" },
+            { label: "Button", icon: "pi pi-fw pi-mobile", to: "/appSystem/button" },
+            { label: "Table", icon: "pi pi-fw pi-table", to: "/appSystem/table" },
+            { label: "List", icon: "pi pi-fw pi-list", to: "/appSystem/list" },
+            { label: "Tree", icon: "pi pi-fw pi-share-alt", to: "/appSystem/tree" },
+            { label: "Panel", icon: "pi pi-fw pi-tablet", to: "/appSystem/panel" },
+            { label: "Overlay", icon: "pi pi-fw pi-clone", to: "/appSystem/overlay" },
+            { label: "Menu", icon: "pi pi-fw pi-bars", to: "/appSystem/menu" },
+            { label: "Message", icon: "pi pi-fw pi-comment", to: "/appSystem/messages" },
+            { label: "File", icon: "pi pi-fw pi-file", to: "/appSystem/file" },
+            { label: "Chart", icon: "pi pi-fw pi-chart-bar", to: "/appSystem/chart" },
+            { label: "Misc", icon: "pi pi-fw pi-circle-off", to: "/appSystem/misc" },
           ],
         },
         {
@@ -85,7 +95,7 @@ export default {
             {
               label: "Free Blocks",
               icon: "pi pi-fw pi-eye",
-              to: "/blocks",
+              to: "/appSystem/blocks",
               badge: "NEW",
             },
             {
@@ -98,20 +108,20 @@ export default {
         {
           label: "Icons",
           items: [
-            { label: "PrimeIcons", icon: "pi pi-fw pi-prime", to: "/icons" },
+            { label: "PrimeIcons", icon: "pi pi-fw pi-prime", to: "/appSystem/icons" },
           ],
         },
         {
           label: "Pages",
           icon: "pi pi-fw pi-clone",
           items: [
-            { label: "Crud", icon: "pi pi-fw pi-user-edit", to: "/crud" },
+            { label: "Crud", icon: "pi pi-fw pi-user-edit", to: "/appSystem/crud" },
             {
               label: "Timeline",
               icon: "pi pi-fw pi-calendar",
-              to: "/timeline",
+              to: "/appSystem/timeline",
             },
-            { label: "Empty", icon: "pi pi-fw pi-circle-off", to: "/empty" },
+            { label: "Empty", icon: "pi pi-fw pi-circle-off", to: "/appSystem/empty" },
           ],
         },
         {

@@ -13,6 +13,16 @@ const routes = [
         component: () => import('./AppSystem.vue'),
         children: [
             {
+                path: 'home',
+                name: 'home',
+                component: () => import('./pages/Home.vue')
+            },
+            {
+                path: 'users',
+                name: 'users',
+                component: () => import('./pages/UsersView.vue')
+            },
+            {
                 path: 'dashboard',
                 name: 'dashboard',
                 component: Dashboard,
