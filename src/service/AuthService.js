@@ -7,21 +7,12 @@ import jwtDecode from "jwt-decode";
 
 export default class AuthService extends Config {
 
-    login(usuario, senha) {
-        return this.auth.signInWithEmailAndPassword(usuario, senha);
+    login(user) {
+        return this.auth.signInWithEmailAndPassword(user.email, user.password);
     }
 
-    create(usuario, senha) {
-        return this.auth.createUserWithEmailAndPassword(usuario.email, senha);
-    }
-
-    atualizarDados(usuario) {
-        let user = this.auth.currentUser;
-        user.updateProfile({
-            displayName: usuario.nome,
-            photoUrl: usuario.urlFoto,
-        });
-        return user;
+    create(user) {
+        return this.auth.createUserWithEmailAndPassword(user.email, user.password);
     }
 
     resetarSenha(email) {
@@ -30,25 +21,29 @@ export default class AuthService extends Config {
 
     limparAccessToken() {
         sessionStorage.removeItem('token');
-        sessionStorage.removeItem('usuarioLogado');
     }
+
     armazenaToken(token) {
         sessionStorage.setItem('token', JSON.stringify(token));
     }
+
     token() {
         let token = sessionStorage.getItem("token");
         token = JSON.parse(token);
         return token;
     }
+
     dataUser() {
         let dataUser = sessionStorage.getItem("token");
         dataUser = JSON.parse(dataUser);
         return dataUser;
     }
+
     jwtDecode() {
         let payLoad = jwtDecode(this.token());
         return payLoad;
     }
+    
     checarToken(metodo) {
         console.log("Token Expirado")
         this.obterNovoAccessToken().then((response) => {

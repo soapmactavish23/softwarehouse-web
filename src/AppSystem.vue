@@ -40,14 +40,9 @@ export default {
           label: "Home",
           items: [
             {
-              label: "Software House",
+              label: "Home",
               icon: "pi pi-fw pi-home",
               to: "/appSystem",
-            },
-            {
-              label: "Gerenciamento de Usuários",
-              icon: "pi pi-fw pi-users",
-              to: "/appSystem/users",
             },
             {
               label: "Dashboard",

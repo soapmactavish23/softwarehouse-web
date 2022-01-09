@@ -22,8 +22,6 @@
                 class="text-center"
                 :class="{ 'p-invalid': submitted && !usuario }"
                 placeholder="Usuario"
-                type="admin"
-                required
                 v-model="usuario"
                 v-tooltip.right="'Informe o usuário!'"
                 autofocus
@@ -36,7 +34,6 @@
                 :class="{ 'p-invalid': submitted && !senha }"
                 placeholder="Senha"
                 type="password"
-                required
                 v-model="senha"
                 v-tooltip.right="'Informe a Senha!'"
               />
@@ -45,7 +42,7 @@
               <a href="#">Esqueceu a senha?</a>
             </div>
             <div class="field">
-              <Button label="Entrar" class="mr-2 mb-2" icon="pi pi-sign-in" />
+              <Button label="Entrar" class="mr-2 mb-2" icon="pi pi-sign-in" type="submit" />
               <Button
                 label="Cadastrar-se"
                 class="mr-2 mb-2 p-button-success"
@@ -76,6 +73,11 @@
 <script>
 export default {
   components: {},
+  methods: {
+    logar() {
+      this.$router.push("/appSystem");
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>

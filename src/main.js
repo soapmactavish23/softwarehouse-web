@@ -6,7 +6,9 @@ import './assets/styles/layout.scss';
 import './assets/demo/flags/flags.css';
 
 import { createApp, reactive } from 'vue';
+// import firebaseApp from './firebaseApp';
 import router from './router';
+// import store from './store';
 import App from './App.vue';
 import PrimeVue from 'primevue/config';
 import AutoComplete from 'primevue/autocomplete';
@@ -104,11 +106,14 @@ router.beforeEach(function(to, from, next) {
 const app = createApp(App);
 
 app.config.globalProperties.$appState = reactive({ theme: 'lara-light-indigo', darkTheme: false });
+// app.config.globalProperties.$firebaseApp = firebaseApp;
 
 app.use(PrimeVue, { ripple: true, inputStyle: 'outlined' });
 app.use(ConfirmationService);
 app.use(ToastService);
 app.use(router);
+// app.use(store);
+
 
 app.directive('tooltip', Tooltip);
 app.directive('ripple', Ripple);
